@@ -1,0 +1,57 @@
+body[data-theme="dark"] {
+  --body-color: white;
+  --body-bg-color: #121212;
+  --main-color: #96F2D7;
+  --main-bg-color: #252525;
+  --header-bg-color: #1e1e1e;
+  --header-bs-color: black;
+}
+body[data-theme="dark"] a:hover {
+  color: #ffd845;
+}
+body[data-theme="dark"] figure figcaption {
+  color: rgba(255, 255, 255, 0.8);
+}
+body[data-theme="dark"] img.icon-black {
+  filter: brightness(0) invert(1);
+}
+body[data-theme="dark"] blockquote {
+  background: rgba(255, 255, 255, 0.05);
+}
+body[data-theme="dark"] .header button[data-action="theme"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+body[data-theme="dark"] .header button[data-action="theme"] .fas::before {
+  content: '\f185';
+}
+body[data-theme="dark"] .post-list {
+  border-color: #353535;
+}
+body[data-theme="dark"] .post-list li {
+  border-color: inherit;
+}
+body[data-theme="dark"] .post i {
+  color: rgba(255, 255, 255, 0.2);
+}
+body[data-theme="dark"] .post .post-share-links a {
+  background: rgba(255, 255, 255, 0.1);
+}
+body[data-theme="dark"] .profile-container {
+  background: var(--main-bg-color);
+  padding: 1rem;
+  flex-wrap: nowrap;
+}
+body[data-theme="dark"] .profile-container .logo-area {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  height: auto;
+  margin: 1rem 0;
+}
+body[data-theme="dark"] .profile-container .logo-area .logo-wrapper {
+  position: inherit;
+  transform: none;
+  padding: 0;
+}
+/*# sourceMappingURL=dark.css.map */

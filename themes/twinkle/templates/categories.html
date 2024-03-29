@@ -1,0 +1,29 @@
+{% extends "template/base.html" %}
+{% block title %}
+    {{ super() + ' - Categories' }}
+{% endblock %}
+
+{% block content %}
+    <ul class="categories">
+        {% for category, articles in categories %}
+            <li>
+                <a href="{{ SITEURL }}/{{ category.url }}">
+                    <div class="category-container">
+                        <div>
+                            <img src="/theme/images/thumbnail.svg"/>
+                        </div>
+                        <h3 class="title">{{ category }}</h3>
+                        <div>{{ articles|length }} posts</div>
+                    </div>
+                </a>
+            </li>
+        {% else %}
+            <li>
+                <div>
+                    <img src="/theme/images/empty.png"/>
+                    <h2>No Category Found</h2>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

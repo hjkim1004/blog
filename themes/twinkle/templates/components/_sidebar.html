@@ -1,0 +1,63 @@
+{% macro github_user(username) %}
+    <div class="logo">
+        <figure>
+            <div class="logo-wrapper">
+                <div class="logo-avatar">
+                    <img src="https://github.com/{{ username }}.png"
+                         alt="{{ username|capitalize }} Profile" title="{{ username|capitalize }} Profile"/>
+                </div>
+            </div>
+            <figcaption>
+                <a href="https://github.com/{{ username }}" target="_blank">@{{ username }}</a>
+            </figcaption>
+        </figure>
+    </div>
+{% endmacro %}
+
+{% macro icon(name) %}
+    <img src="/theme/images/icon_{{ name }}.svg" alt="{{ name }} Icon" class="icon {{ "icon-black" if name in ['home', 'github'] }}"/>
+{% endmacro %}
+
+<aside class="sidebar">
+    <div class="profile-container">
+        <div class="logo-area">
+            {% if GITHUB_USERNAME %}
+                {{ github_user(GITHUB_USERNAME) }}
+            {% endif %}
+        </div>
+        <div>
+            <div class="info-area">
+                <h3>{{ AUTHOR }}</h3>
+                <p>{{ AUTHOR_DESC }}</p>
+            </div>
+            <ul class="link-area">
+                {% for name, link in LINKS %}
+                    <li><a href="{{ link }}" target="_blank">{{ icon(name) }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="user_meta">
+        <h2>{{ TAGLINE }}</h2>
+        {% if AUTHOR_BIO %}
+            <p class="bio">{{ AUTHOR_BIO }}</p>
+        {% endif %}
+        <ul>
+            {% for title, link in MENUITEMS %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+                {% for p in PAGES %}
+                    <li{% if p == page %} class="active"{% endif %}><a
+                            href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                {% endfor %}
+            {% else %}
+                {% for cat, null in categories %}
+                    <li{% if cat == category %} class="active"{% endif %}><a
+                            href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</aside>

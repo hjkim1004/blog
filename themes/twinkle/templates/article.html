@@ -1,0 +1,112 @@
+{% extends "template/base.html" %}
+{% block sidebar %}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock title %}
+{% block content %}
+    <article class="post">
+        <h1 class="post-title">{{ article.title }}</h1>
+        <div class="post-metadata">
+            <ul class="meta-list">
+                {% if article.author %}
+                    <li><i class="fas fa-user"></i> Author: <b>{{ article.author }}</b></li>
+                {% endif %}
+                {% if article.date %}
+                    <li><i class="fas fa-calendar-alt"></i> Date: {{ article.date|strftime("%Y-%m-%d") }}</li>
+                {% endif %}
+                {% if not article.category == 'posts' %}
+                    <li><i class="fas fa-link"></i> Category: <a
+                            href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
+                {% endif %}
+                {% if article.tags %}
+                    <li>
+                        <span><i class="fas fa-tags"></i> Tags: </span>
+                        <ul class="tag-list">
+                            {% for tag in article.tags %}
+                                <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endif %}
+            </ul>
+
+
+        </div>
+
+        {# Series Plugin Start #}
+        {% if article.series %}
+            <div class="post-series">
+                <h4 class="title">{{ article.series.name }}</h4>
+                <ol class="list">
+                    {% for part_article in article.series.all %}
+                        <li {% if part_article == article %}class="active"{% endif %}>
+                            <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        {% endif %}
+        {# Series Plugin End #}
+
+        <div class="post-content">
+            <div class="post-index"></div>
+            <div class="post-body">{{ article.content }}</div>
+        </div>
+
+        {# Share Post Plugin Start #}
+        {% if article.share_post and article.status != 'draft' %}
+            <div class="post-share-links">
+                <h3 class="title">
+                    <span>Share with</span>
+                    <i class="fas fa-share-alt"></i>
+                </h3>
+                <div class="list">
+                    <a class="email" href="{{ article.share_post['email'] }}" target="_blank" title="Share via Email">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                    </a>
+                    <a class="twitter" href="{{ article.share_post['twitter'] }}" target="_blank"
+                       title="Share on Twitter">
+                        <img src="/theme/images/icon_twitter.svg" /><span>Twitter</span>
+                    </a>
+                    <a class="facebook" href="{{ article.share_post['facebook'] }}" target="_blank"
+                       title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i><span>Facebook</span>
+                    </a>
+                    <a class="linkedin" href="{{ article.share_post['linkedin'] }}" target="_blank"
+                       title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+        {# Share Post Plugin End #}
+
+        {% if DISQUS_SITENAME %}
+            <div class="post-comments">
+                <h3 class="title">Comments <i class="fas fa-comments"></i></h3>
+                <div>
+                    <div id="disqus_thread"></div>
+                </div>
+                <script type="text/javascript">
+                    const createDisqusScript = function () {
+                        const dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = '//{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+
+                        return dsq;
+                    }
+
+                    const createDisqus = function () {
+                        document.body.appendChild(createDisqusScript())
+                    }
+
+                    createDisqus();
+                    Store.theme.observer.addObserver(function (e) {
+                        DISQUS.reset();
+                        createDisqus();
+                    });
+                </script>
+                <noscript>Please enable JavaScript to view <a href="//disqus.com/?ref_noscript">comments</a>.</noscript>
+            </div>
+        {% endif %}
+    </article>
+{% endblock %}
