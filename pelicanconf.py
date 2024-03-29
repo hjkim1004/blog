@@ -45,7 +45,7 @@ SITEMAP = {
 LINKS = (
     ("home", "https://twinklekhj.xyz"),
     ("velog", "https://velog.io/@developer_khj"),
-    ("github", "https://velog.io/@developer_khj"),
+    ("github", "https://github.com/hjkim1004"),
     ("gmail", "mailto:developer.heejeong@gmail.com"),
 )
 
