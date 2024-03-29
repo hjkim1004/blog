@@ -11,7 +11,7 @@
                     <div class="logo">
                         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                            title="Permalink to {{ article.title }}">
-                            <img src="{{ article.featured_image }}" alt="{{ article.title|capitalize }} Preview Image">
+                            <img src="{{ article.featured_image|replace('{static}', SITEURL) }}" alt="{{ article.title|capitalize }} Preview Image">
                         </a>
                     </div>
                     {# Representation Image Plugin End #}
