@@ -15,7 +15,7 @@
 {% endmacro %}
 
 {% macro icon(name) %}
-    <img src="/theme/images/icon_{{ name }}.svg" alt="{{ name }} Icon" class="icon {{ "icon-black" if name in ['home', 'github'] }}"/>
+    <img src="{{ SITEURL }}/theme/images/icon_{{ name }}.svg" alt="{{ name }} Icon" class="icon {{ "icon-black" if name in ['home', 'github'] }}"/>
 {% endmacro %}
 
 <aside class="sidebar">

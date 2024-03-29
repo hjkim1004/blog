@@ -4815,8 +4815,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("/theme/fonts/fontawesome/fa-brands-400.eot");
-  src: url("/theme/fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("/theme/fonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("/theme/fonts/fontawesome/fa-brands-400.woff") format("woff"), url("/theme/fonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("/theme/fonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("{{ SITEURL }}/theme/fonts/fontawesome/fa-brands-400.eot");
+  src: url("{{ SITEURL }}/theme/fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-brands-400.woff") format("woff"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg");
 }
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -4826,8 +4826,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Regular';
   font-style: normal;
   font-weight: 400;
-  src: url("/theme/fonts/fontawesome/fa-regular-400.eot");
-  src: url("/theme/fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("/theme/fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("/theme/fonts/fontawesome/fa-regular-400.woff") format("woff"), url("/theme/fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("/theme/fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("{{ SITEURL }}/theme/fonts/fontawesome/fa-regular-400.eot");
+  src: url("{{ SITEURL }}/theme/fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-regular-400.woff") format("woff"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg");
 }
 .far {
   font-family: 'Font Awesome 5 Regular';
@@ -4838,8 +4838,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Solid';
   font-style: normal;
   font-weight: 900;
-  src: url("/theme/fonts/fontawesome/fa-solid-900.eot");
-  src: url("/theme/fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/theme/fonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("/theme/fonts/fontawesome/fa-solid-900.woff") format("woff"), url("/theme/fonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("/theme/fonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("{{ SITEURL }}/theme/fonts/fontawesome/fa-solid-900.eot");
+  src: url("{{ SITEURL }}/theme/fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-solid-900.woff") format("woff"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("{{ SITEURL }}/theme/fonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg");
 }
 .fa, .fas {
   font-family: 'Font Awesome 5 Solid';
