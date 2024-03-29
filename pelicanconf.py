@@ -32,7 +32,7 @@ DISQUS_SITENAME = "twinklekhj"
 #######################################
 # PLUGINS
 #######################################
-PLUGIN_PATHS = ['./pelican-plugins']
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['pelican.plugins.sitemap', 'representative_image', 'share_post', 'series']
 
 SITEMAP = {
