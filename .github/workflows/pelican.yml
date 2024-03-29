@@ -18,7 +18,7 @@ jobs:
       env:
         # GH_PAGES_BRANCH: gh-pages
         # GH_PAGES_CNAME: custom domain
-        # PELICAN_CONFIG_FILE: pelicanconf.py
+        PELICAN_CONFIG_FILE: publishconf.py
         # PELICAN_CONTENT_FOLDER: content
         # PELICAN_THEME_FOLDER: package.json
         # GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
