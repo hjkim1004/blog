@@ -12,10 +12,6 @@
                 {% if article.date %}
                     <li><i class="fas fa-calendar-alt"></i> Date: {{ article.date|strftime("%Y-%m-%d") }}</li>
                 {% endif %}
-                {% if not article.category == 'posts' %}
-                    <li><i class="fas fa-link"></i> Category: <a
-                            href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
-                {% endif %}
                 {% if article.tags %}
                     <li>
                         <span><i class="fas fa-tags"></i> Tags: </span>
@@ -27,24 +23,25 @@
                     </li>
                 {% endif %}
             </ul>
-
-
         </div>
 
-        {# Series Plugin Start #}
-        {% if article.series %}
-            <div class="post-series">
-                <h4 class="title">{{ article.series.name }}</h4>
-                <ol class="list">
-                    {% for part_article in article.series.all %}
-                        <li {% if part_article == article %}class="active"{% endif %}>
-                            <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ol>
-            </div>
+        {% if article.category %}
+            {# Articles in category #}
+            {% for category, articles in categories if category == article.category %}
+                <div class="post-series">
+                    <h4 class="title">
+                        <a href="{{ SITEURL }}/{{ category.url }}">{{ category.name }}</a>
+                    </h4>
+                    <ol class="list">
+                        {% for part_article in articles %}
+                            <li {% if part_article == article %}class="active"{% endif %}>
+                                <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            {% endfor %}
         {% endif %}
-        {# Series Plugin End #}
 
         <div class="post-content">
             <div class="post-index"></div>
@@ -64,7 +61,7 @@
                     </a>
                     <a class="twitter" href="{{ article.share_post['twitter'] }}" target="_blank"
                        title="Share on Twitter">
-                        <img src="{{ SITEURL }}/theme/images/icon_twitter.svg" /><span>Twitter</span>
+                        <img src="{{ SITEURL }}/theme/images/icon_twitter.svg"/><span>Twitter</span>
                     </a>
                     <a class="facebook" href="{{ article.share_post['facebook'] }}" target="_blank"
                        title="Share on Facebook">

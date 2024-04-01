@@ -14,50 +14,77 @@
     </div>
 {% endmacro %}
 
-{% macro icon(name) %}
-    <img src="{{ SITEURL }}/theme/images/icon_{{ name }}.svg" alt="{{ name }} Icon" class="icon {{ "icon-black" if name in ['home', 'github'] }}"/>
+{% macro icon(name, type) %}
+    {% if type == 'fontawesome' %}
+        <i class="fas fa-{{ name }} icon"></i>
+    {% else %}
+        <img src="{{ SITEURL }}/theme/images/icon_{{ name }}.svg" alt="{{ name }} Icon"
+             class="icon {{ 'icon-black' if name in ['home', 'github'] }}"/>
+    {% endif %}
 {% endmacro %}
 
 <aside class="sidebar">
-    <div class="profile-container">
+    <div class="sidebar-widget profile-container">
         <div class="logo-area">
-            {% if GITHUB_USERNAME %}
-                {{ github_user(GITHUB_USERNAME) }}
+            {% if AUTHOR_GITHUB %}
+                {{ github_user(AUTHOR_GITHUB) }}
             {% endif %}
         </div>
         <div>
             <div class="info-area">
-                <h3>{{ AUTHOR }}</h3>
+                <h4>{{ AUTHOR }}</h4>
                 <p>{{ AUTHOR_DESC }}</p>
             </div>
             <ul class="link-area">
-                {% for name, link in LINKS %}
-                    <li><a href="{{ link }}" target="_blank">{{ icon(name) }}</a></li>
+                {% for name, link, type in LINKS %}
+                    <li><a href="{{ link }}" target="_blank">{{ icon(name, type) }}</a></li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 
-    <div class="user_meta">
-        <h2>{{ TAGLINE }}</h2>
-        {% if AUTHOR_BIO %}
-            <p class="bio">{{ AUTHOR_BIO }}</p>
-        {% endif %}
-        <ul>
-            {% for title, link in MENUITEMS %}
-                <li><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-            {% if DISPLAY_PAGES_ON_MENU %}
-                {% for p in PAGES %}
-                    <li{% if p == page %} class="active"{% endif %}><a
-                            href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                {% endfor %}
-            {% else %}
-                {% for cat, null in categories %}
-                    <li{% if cat == category %} class="active"{% endif %}><a
-                            href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                {% endfor %}
-            {% endif %}
-        </ul>
+    <div>
+        {% block categories %}
+            <section class="sidebar-widget">
+                <div class="widget-title"><a href="{{ SITEURL }}/github/">GitHub</a></div>
+                <div class="widget-title"><a href="{{ SITEURL }}/categories.html">Categories</a></div>
+                <div class="widget-content">
+                    {% if categories %}
+                        <ul class="category-list">
+                            {% for element, articles in categories %}
+                                <li class="{{ 'active' if element == category }}">
+                                    <a href="{{ SITEURL }}/{{ element.url }}">
+                                        <i class="fas {{ 'fa-folder-open' if element == category else 'fa-folder' }}"></i> {{ element.name }}
+                                        ({{ articles|length }})
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No Categories found</p>
+                    {% endif %}
+                </div>
+            </section>
+        {% endblock %}
+
+        {% block tags %}
+            <section class="sidebar-widget">
+                <div class="widget-title">Tags</div>
+                <div class="widget-content">
+                    {% if tags %}
+                        <ul class="tag-list">
+                            {% for element, articles in tags %}
+                                <li class="{{ 'active' if element == tag }}">
+                                    <a href="{{ SITEURL }}/{{ element.url }}"><i
+                                            class="fas fa-tag"></i> {{ element.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No tags found</p>
+                    {% endif %}
+                </div>
+            </section>
+        {% endblock %}
     </div>
 </aside>

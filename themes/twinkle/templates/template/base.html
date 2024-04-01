@@ -8,7 +8,9 @@
 </head>
 <body data-theme="light" class="scrolled">
 {# Header #}
-{% include "components/_header.html" %}
+{% block header %}
+    {% include "components/_header.html" %}
+{% endblock %}
 
 {# Apply Store #}
 <script type="text/javascript" src="{{ SITEURL }}/theme/js/store.js"></script>
@@ -26,8 +28,8 @@
 
         {# Content #}
         <section class="content">
-            <div>{% block content_title %}{% endblock %}</div>
-            <div>{% block content %}{% endblock %}</div>
+            <div class="content-header">{% block content_title %}{% endblock %}</div>
+            <div class="content-body">{% block content %}{% endblock %}</div>
         </section>
     </div>
 </main>
@@ -35,6 +37,10 @@
 {# Add analytics #}
 {% include 'components/_analytics.html' %}
 
+{# Header #}
+{% block footer %}
+    {% include "components/_footer.html" %}
+{% endblock %}
 
 {# Apply Code style #}
 <script type="text/javascript" src="{{ SITEURL }}/theme/lib/code/code.js"></script>

@@ -1,4 +1,3 @@
-AUTHOR = "Heejeong Kim"
 SITENAME = "Twinkle's Blog"
 SITEURL = ""
 
@@ -6,21 +5,12 @@ PATH = "content"
 TIMEZONE = 'Asia/Seoul'
 DEFAULT_LANG = 'en'
 
-# THEME settings
-THEME = "themes/twinkle"
-THEME_STATIC_DIR = 'theme'
-
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-# Social widget
-SOCIAL = (
-    ("KakaoTalk", "https://pf.kakao.com/_byerG/chat"),
-)
 
 DEFAULT_PAGINATION = 10
 
@@ -30,29 +20,47 @@ DEFAULT_PAGINATION = 10
 DISQUS_SITENAME = "twinklekhj"
 
 #######################################
-# PLUGINS
+# THEME Options
 #######################################
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['pelican.plugins.sitemap', 'representative_image', 'share_post', 'series']
+# THEME
+THEME = "themes/twinkle"
+THEME_STATIC_DIR = 'theme'
+
+# JINJA
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.loopcontrols']
+}
+
+# PLUGINS
+PLUGIN_PATHS = ['./themes/twinkle/plugins']
+PLUGINS = [
+    'pelican.plugins.sitemap',
+    'representative_image',
+    'share_post',
+    'github_activity'
+]
+
+CLEAN_SUMMARY_MAXIMUM = 0
+CLEAN_SUMMARY_MINIMUM_ONE = False
 
 SITEMAP = {
     'format': 'xml'
 }
 
-#######################################
-# Config options custom
-#######################################
 LINKS = (
-    ("home", "https://twinklekhj.xyz"),
-    ("velog", "https://velog.io/@developer_khj"),
-    ("github", "https://github.com/hjkim1004"),
-    ("gmail", "mailto:developer.heejeong@gmail.com"),
+    ("home", "https://twinklekhj.xyz", "fontawesome"),
+    ("velog", "https://velog.io/@developer_khj", "image"),
+    ("github", "https://github.com/hjkim1004", "image"),
+    ("gmail", "mailto:developer.heejeong@gmail.com", "image"),
 )
 
-AUTHOR_DESC = "Full Stack Developer"
+# Author Name
+AUTHOR = "Heejeong Kim"
+AUTHOR_GITHUB = "hjkim1004"
+AUTHOR_DESC = "Hi, I'm full-stack developer<br>Thanks for visiting"
 
-# GitHub
-GITHUB_USERNAME = "hjkim1004"
+GITHUB_ACTIVITY_FEED = 'https://github.com/hjkim1004.atom'
+GITHUB_ACTIVITY_MAX_ENTRIES = 10
 
 # OG METADATA
 OG_TITLE = SITENAME

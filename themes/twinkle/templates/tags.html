@@ -4,7 +4,7 @@
 
 	<dl id="tag_list">
 		<ul>
-			{% for tag in tag_cloud %}
+			{% for tag in tag_cloud if tag %}
 				<li class="tag-{{ tag.1 }}"><a href="/tag/{{ tag.0 }}.html">{{ tag.0 }}</a></li>
 			{% endfor %}
 		</ul>

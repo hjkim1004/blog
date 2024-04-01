@@ -1,5 +1,7 @@
 {% extends "index.html" %}
 {% block title %}{{ super() }} - {{ category|capitalize }} Category{% endblock %}
 {% block content_title %}
-    <h3 class="subtitle"><b>{{ category|capitalize }}</b> Category - Posts <b>{{ articles_page.object_list|length }}</b></h3>
+    <h6 class="desc">Category</h6>
+    <h3 class="title"><b>{{ category }}</b></h3>
 {% endblock %}
+{{ category }}

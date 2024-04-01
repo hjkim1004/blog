@@ -1,4 +1,4 @@
-# SVBTLE
+# TWINKE
 
 Svbtle theme is a close copy of [Svbtle.com](http://www.svbtle.com) with
 a few minor changes for use with [Pelican](http://pelican.notmyidea.org).
@@ -6,7 +6,7 @@ a few minor changes for use with [Pelican](http://pelican.notmyidea.org).
 ## DEMO
 
 You can see the [theme in
-action](http://williamting.com/drafts/this-is-a-theme-testing-post.html), or
+action](), or
 the site code [here](https://github.com/wting/williamting.com).
 
 ![theme screenshot](https://raw.github.com/wting/pelican-svbtle/master/screenshot.png)

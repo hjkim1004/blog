@@ -3,11 +3,12 @@ body[data-theme="dark"] {
   --body-bg-color: #121212;
   --main-color: #96F2D7;
   --main-bg-color: #252525;
+  --element-color: #b9caff;
+  --element-bg-color: rgba(209, 228, 248, 0.1);
   --header-bg-color: #1e1e1e;
   --header-bs-color: black;
-}
-body[data-theme="dark"] a:hover {
-  color: #ffd845;
+  --footer-color: #eee;
+  --footer-bg-color: rgba(0, 0, 0, 0.8);
 }
 body[data-theme="dark"] figure figcaption {
   color: rgba(255, 255, 255, 0.8);
@@ -31,6 +32,9 @@ body[data-theme="dark"] .post-list {
 body[data-theme="dark"] .post-list li {
   border-color: inherit;
 }
+body[data-theme="dark"] .post-list li .logo {
+  background: rgba(255, 255, 255, 0.1);
+}
 body[data-theme="dark"] .post i {
   color: rgba(255, 255, 255, 0.2);
 }
@@ -39,19 +43,14 @@ body[data-theme="dark"] .post .post-share-links a {
 }
 body[data-theme="dark"] .profile-container {
   background: var(--main-bg-color);
-  padding: 1rem;
-  flex-wrap: nowrap;
 }
 body[data-theme="dark"] .profile-container .logo-area {
-  display: flex;
-  justify-content: center;
-  background: transparent;
-  height: auto;
-  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
 }
 body[data-theme="dark"] .profile-container .logo-area .logo-wrapper {
-  position: inherit;
-  transform: none;
-  padding: 0;
+  background: black;
+}
+body[data-theme="dark"] .paginator .paginator-num li.active {
+  color: #222;
 }
 /*# sourceMappingURL=dark.css.map */

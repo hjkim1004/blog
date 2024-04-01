@@ -10,10 +10,14 @@ body pre {
 body pre::after {
   content: attr(data-ke-language);
   position: absolute;
-  bottom: 8px;
-  right: 12px;
-  color: #cfd2d1;
-  font-size: 12px;
+  bottom: 1.5rem;
+  right: 0.25rem;
+  border-radius: 7px;
+  padding: 0.2rem 0.5rem;
+  color: #919191;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: var(--fs-7);
+  font-family: 'sansation', monospace;
 }
 body pre code {
   padding: 0 !important;
