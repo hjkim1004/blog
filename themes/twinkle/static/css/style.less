@@ -724,8 +724,10 @@ figure {
       font-size: var(--fs-2);
       font-weight: 700;
       text-transform: capitalize;
-      border-bottom: solid 3px;
-      width: fit-content;
+
+      & a {
+        border-bottom: solid 3px;
+      }
     }
 
     & li.active {

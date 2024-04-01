@@ -54,7 +54,7 @@
                             {% for element, articles in categories %}
                                 <li class="{{ 'active' if element == category }}">
                                     <a href="{{ SITEURL }}/{{ element.url }}">
-                                        <i class="fas {{ 'fa-folder-open' if element == category else 'fa-folder' }}"></i> {{ element.name }}
+                                        <i class="fas {{ 'fa-folder-open' if element == category else 'fa-folder' }}"></i> {{ element.name|capitalize }}
                                         ({{ articles|length }})
                                     </a>
                                 </li>

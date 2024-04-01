@@ -743,8 +743,9 @@ figure figcaption {
   font-size: var(--fs-2);
   font-weight: 700;
   text-transform: capitalize;
+}
+.post .post-series .title a {
   border-bottom: solid 3px;
-  width: fit-content;
 }
 .post .post-series li.active {
   color: var(--main-color);
