@@ -687,7 +687,15 @@ figure figcaption {
 }
 /* Article: The post page */
 .post {
-  font-size: var(--fs-6);
+  --fs-1: 2rem;
+  --fs-2: 1.75rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.25rem;
+  --fs-5: 1.15rem;
+  --fs-6: 1rem;
+  --fs-7: 0.9rem;
+}
+.post {
   max-width: 900px;
   margin: 3rem auto;
 }
@@ -706,7 +714,7 @@ figure figcaption {
   flex-wrap: wrap;
   align-items: center;
   justify-content: left;
-  margin-top: 1rem !important;
+  margin-top: 0 !important;
   gap: 0.5rem;
 }
 .post .post-metadata ul {
@@ -732,8 +740,9 @@ figure figcaption {
   margin-top: 1rem !important;
 }
 .post .post-series .title {
-  font-size: var(--fs-4);
+  font-size: var(--fs-2);
   font-weight: 700;
+  text-transform: capitalize;
   border-bottom: solid 3px;
   width: fit-content;
 }
@@ -806,6 +815,19 @@ figure figcaption {
 .post .post-share-links a.email {
   background: linear-gradient(45deg, #e34133, #f3a004);
   color: white;
+}
+.post > .post-content h1,
+.post > .post-content h2,
+.post > .post-content h3,
+.post > .post-content h4,
+.post > .post-content h5,
+.post > .post-content h6,
+.post > .post-content p {
+  margin: 0.5rem 0;
+}
+.post > .post-content hr {
+  margin: 1rem 0;
+  border: solid 1px #dee2e6;
 }
 .post > *:not(:first-child) {
   margin-top: 3rem;

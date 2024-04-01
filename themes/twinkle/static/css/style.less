@@ -677,7 +677,16 @@ figure {
 
 /* Article: The post page */
 .post {
-  font-size: var(--fs-6);
+  --fs-1: 2rem;
+  --fs-2: 1.75rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.25rem;
+  --fs-5: 1.15rem;
+  --fs-6: 1rem;
+  --fs-7: 0.9rem;
+}
+
+.post {
   max-width: 900px;
   margin: 3rem auto;
 
@@ -691,10 +700,9 @@ figure {
     font-weight: 600;
   }
 
-
   & .post-metadata {
     .flex-box(@flex-direction: column);
-    margin-top: 1rem !important;
+    margin-top: 0 !important;
     gap: 0.5rem;
 
     & ul {
@@ -713,8 +721,9 @@ figure {
     margin-top: 1rem !important;
 
     & .title {
-      font-size: var(--fs-4);
+      font-size: var(--fs-2);
       font-weight: 700;
+      text-transform: capitalize;
       border-bottom: solid 3px;
       width: fit-content;
     }
@@ -778,6 +787,17 @@ figure {
         background: linear-gradient(45deg, #e34133, #f3a004);
         color: white;
       }
+    }
+  }
+
+  & > .post-content {
+    & h1, h2, h3, h4, h5, h6, p {
+      margin: 0.5rem 0;
+    }
+
+    & hr {
+      margin: 1rem 0;
+      border: solid 1px #dee2e6;
     }
   }
 
