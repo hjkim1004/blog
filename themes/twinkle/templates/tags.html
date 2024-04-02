@@ -1,12 +1,22 @@
 {% extends "template/base.html" %}
+{% block content_title %}
+    <h4 class="desc">Tags</h4>
+{% endblock %}
 {% block content %}
-	{% include "components/_header.html" %}
+    {% set ns = namespace() %}
+    {% set ns.tags = [] %}
+    <div class="tag-container">
+        {% for tag, articles in tags %}
+            {% set tmp = ns.tags.append([tag.name, articles|length, SITEURL + '/' + tag.url]) %}
+        {% endfor %}
 
-	<dl id="tag_list">
-		<ul>
-			{% for tag in tag_cloud if tag %}
-				<li class="tag-{{ tag.1 }}"><a href="/tag/{{ tag.0 }}.html">{{ tag.0 }}</a></li>
-			{% endfor %}
-		</ul>
-	</dl>
+        <div id="container"></div>
+    </div>
+
+    <script type="text/javascript" src="{{ SITEURL }}/theme/lib/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/lib/highcharts/highcharts-more.js"></script>
+    <script>
+        const tags = {{ ns.tags }};
+    </script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/tags.js"></script>
 {% endblock %}
