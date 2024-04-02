@@ -37,7 +37,8 @@ PLUGINS = [
     'pelican.plugins.sitemap',
     'representative_image',
     'share_post',
-    'github_activity'
+    'github_activity',
+    'neighbors'
 ]
 
 CLEAN_SUMMARY_MAXIMUM = 0
