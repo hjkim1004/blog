@@ -39,6 +39,9 @@
                 {% for name, link, type in LINKS %}
                     <li><a href="{{ link }}" target="_blank">{{ icon(name, type) }}</a></li>
                 {% endfor %}
+                {% if FEED_ALL_ATOM %}
+                    <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" target="_blank">{{ icon('rss', 'image') }}</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>
