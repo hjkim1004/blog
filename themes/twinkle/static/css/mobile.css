@@ -117,6 +117,9 @@
   .post blockquote {
     margin: 1rem 0;
   }
+  .post > *:not(:first-child) {
+    margin-top: 2rem;
+  }
   .post .post-metadata ul.meta-list {
     gap: 0.25rem;
   }
@@ -124,7 +127,7 @@
     padding: 0.3rem 0.6rem;
   }
   .post .post-series {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     margin-left: -5%;
     margin-right: -5%;
     border-radius: 0;

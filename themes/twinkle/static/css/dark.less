@@ -29,10 +29,13 @@ body[data-theme="dark"] {
   .header {
     & button[data-action="theme"] {
       background: rgba(255, 255, 255, 0.1);
-      color: white;
 
-      & .fas::before {
-        content: '\f185';
+      & .theme-dark {
+        height: 0;
+      }
+
+      & .theme-white {
+        height: 70%;
       }
     }
   }
@@ -78,6 +81,19 @@ body[data-theme="dark"] {
       & li.active {
         color: #222;
       }
+    }
+  }
+
+  /* Tag */
+
+  .tag-container {
+    & .highcharts-background {
+      fill: rgba(255, 255, 255, 0.1);
+    }
+
+    & text {
+      color: white !important;
+      fill: white !important;
     }
   }
 }

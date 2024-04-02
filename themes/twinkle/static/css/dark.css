@@ -21,10 +21,12 @@ body[data-theme="dark"] blockquote {
 }
 body[data-theme="dark"] .header button[data-action="theme"] {
   background: rgba(255, 255, 255, 0.1);
-  color: white;
 }
-body[data-theme="dark"] .header button[data-action="theme"] .fas::before {
-  content: '\f185';
+body[data-theme="dark"] .header button[data-action="theme"] .theme-dark {
+  height: 0;
+}
+body[data-theme="dark"] .header button[data-action="theme"] .theme-white {
+  height: 70%;
 }
 body[data-theme="dark"] .post-list {
   border-color: #353535;
@@ -52,5 +54,12 @@ body[data-theme="dark"] .profile-container .logo-area .logo-wrapper {
 }
 body[data-theme="dark"] .paginator .paginator-num li.active {
   color: #222;
+}
+body[data-theme="dark"] .tag-container .highcharts-background {
+  fill: rgba(255, 255, 255, 0.1);
+}
+body[data-theme="dark"] .tag-container text {
+  color: white !important;
+  fill: white !important;
 }
 /*# sourceMappingURL=dark.css.map */

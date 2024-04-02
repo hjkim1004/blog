@@ -3,7 +3,7 @@
     {{ super() + ' - Categories' }}
 {% endblock %}
 {% block content_title %}
-    <h6 class="desc">Categories</h6>
+    <h4 class="desc">Categories</h4>
 {% endblock %}
 {% block content %}
     <ul class="category-list">
@@ -32,7 +32,7 @@
                             {% endif %}
                         </a>
                     </div>
-                    <h4 class="title"><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></h4>
+                    <h4 class="title"><a href="{{ SITEURL }}/{{ category.url }}">{{ category|capitalize }}</a></h4>
                     <p>
                         <span><b>{{ articles|length }}</b> posts</span>ㆍ<span>Last Updates {{ ns.article.date|strftime("%Y-%m-%d") }}</span>
                     </p>

@@ -31,7 +31,7 @@
                     {% endif %}
                     {% if article.date %}
                         <div class="info-desc">
-                            {{ article.date|strftime("%Y-%m-%d %H:%M") }}
+                            Posted on {{ article.locale_date }} in <a href="{{ STIEURL }}/category/{{ article.category }}.html">{{ article.category }}</a>
                         </div>
                     {% endif %}
                     {% if article.tags %}

@@ -3,7 +3,9 @@
 <head>
     {% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-        {% include "components/_include.html" %}
+        {% block include %}
+            {% include "components/_include.html" %}
+        {% endblock %}
     {% endblock head %}
 </head>
 <body data-theme="light" class="scrolled">

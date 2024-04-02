@@ -1,11 +1,11 @@
 {% extends "template/base.html" %}
 {% block content_title %}
-    <h3>Archives</h3>
+    <h4 class="desc">Archives</h4>
 {% endblock %}
 {% block content %}
     <dl>
         {% for article in dates %}
-            <dt>{{ article.date|strftime("%Y-%m-%d %H:%M") }}</dt>
+            <dt>{{ article.date|strftime("%Y-%m-%d") }}</dt>
             <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
         {% endfor %}
     </dl>

@@ -19,7 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.addEventListener('click', function (event) {
                     const action = this.dataset.action;
                     if (action === 'theme') {
+                        this.classList.add('animate')
                         Action.toggleTheme();
+                    }
+                    else if (action === 'hide'){
+                        this.classList.toggle('hide');
+                        if(this.classList.contains('hide')){
+                            this.innerHTML = `Show posts`
+                        } else {
+                            this.innerHTML = `Hide posts`
+                        }
                     }
                 })
             }
