@@ -84,7 +84,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin: 0.25rem 0;
   box-sizing: border-box;
   line-height: 1.25;
 }
@@ -251,6 +251,9 @@ img.icon-black {
 .header button[data-action="theme"] img {
   height: 70%;
 }
+.header button[data-action="theme"].animate {
+  transition: 0.5s;
+}
 .header button[data-action="theme"].animate img {
   transition: 0.5s;
 }
@@ -380,6 +383,8 @@ main .content .content-header .desc + .title {
 /* Tag */
 .tag-container {
   margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .tag-container .highcharts-background {
   fill: var(--main-bg-color);
@@ -772,6 +777,8 @@ figure figcaption {
 }
 .post .post-series .tail button {
   background: none;
+  padding: 0;
+  color: inherit;
   border: none;
   margin-top: 1rem;
   font-size: var(--fs-6);
@@ -851,7 +858,7 @@ figure figcaption {
   justify-content: space-between;
 }
 .post .posts-internal-links ul li {
-  width: 300px;
+  width: 400px;
   max-width: calc(50% - 0.5rem / 2);
 }
 .post .posts-internal-links ul li .article-page {
@@ -864,9 +871,14 @@ figure figcaption {
   gap: 1rem;
   align-items: center;
   justify-content: left;
+  width: 100%;
+}
+.post .posts-internal-links ul li .article-page:hover .icon i {
+  animation: swift-left 1s;
+  width: 10%;
 }
 .post .posts-internal-links ul li .article-page .info {
-  flex: 1;
+  width: calc(90% - 1rem);
 }
 .post .posts-internal-links ul li .article-page .info .title {
   font-weight: 600;
@@ -874,9 +886,15 @@ figure figcaption {
 .post .posts-internal-links ul li .article-page .info .desc {
   color: var(--main-color);
   font-size: var(--fs-5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post .posts-internal-links ul li:nth-child(2n) > .article-page {
   flex-direction: row-reverse;
+}
+.post .posts-internal-links ul li:nth-child(2n) > .article-page:hover .icon i {
+  animation: swift-right 1s;
 }
 .post > .post-content h1,
 .post > .post-content h2,
@@ -918,5 +936,15 @@ figure figcaption {
 dl dd {
   margin-bottom: 0.5rem;
   color: var(--main-color);
+}
+@keyframes swift-left {
+  50% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes swift-right {
+  50% {
+    transform: translateX(5px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

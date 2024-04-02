@@ -5,7 +5,7 @@ Highcharts.chart('container', {
     },
     title: {
         text: 'Tags in articles',
-        align: 'left'
+        align: 'center'
     },
     tooltip: {
         useHTML: true,
@@ -36,11 +36,6 @@ Highcharts.chart('container', {
             dataLabels: {
                 enabled: true,
                 format: '{point.name}',
-                filter: {
-                    property: 'y',
-                    operator: '>',
-                    value: 250
-                },
                 style: {
                     color: 'black',
                     textOutline: 'none',

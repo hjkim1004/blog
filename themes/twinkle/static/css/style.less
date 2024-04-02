@@ -61,6 +61,19 @@ html {
   white-space: -moz-pre-wrap;
   word-wrap: break-word;
 }
+.ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis-line(@line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  min-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .flex-box(
   @flex: flex,
@@ -122,7 +135,7 @@ div, section, main, header, footer, article, ol, p {
 
 
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
+  margin: 0.25rem 0;
   box-sizing: border-box;
   line-height: 1.25;
 }
@@ -312,8 +325,12 @@ img.icon-black {
       height: 70%;
     }
 
-    &.animate img {
+    &.animate {
       transition: 0.5s;
+
+      img {
+        transition: 0.5s;
+      }
     }
 
     & .theme-dark {
@@ -457,6 +474,8 @@ main {
 /* Tag */
 .tag-container {
   margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
 
   & .highcharts-background {
     fill: var(--main-bg-color);
@@ -792,6 +811,8 @@ figure {
     & .tail {
       & button {
         background: none;
+        padding: 0;
+        color: inherit;
         border: none;
         margin-top: 1rem;
         font-size: var(--fs-6);
@@ -861,7 +882,7 @@ figure {
       .flex-box(@justify-content: space-between);
 
       & li {
-        width: 300px;
+        width: 400px;
         max-width: calc(50% - 0.5rem / 2);
 
         & .article-page {
@@ -869,9 +890,15 @@ figure {
           padding: 1rem;
           border-radius: 10px;
           .flex-box(@gap: 1rem);
+          width: 100%;
+
+          &:hover .icon i {
+            animation: swift-left 1s;
+            width: 10%;
+          }
 
           & .info {
-            flex: 1;
+            width: calc(90% - 1rem);
 
             & .title {
               font-weight: 600;
@@ -880,6 +907,7 @@ figure {
             & .desc {
               color: var(--main-color);
               font-size: var(--fs-5);
+              .ellipsis();
             }
           }
         }
@@ -887,6 +915,10 @@ figure {
 
       & li:nth-child(2n) > .article-page {
         flex-direction: row-reverse;
+
+        &:hover .icon i {
+          animation: swift-right 1s;
+        }
       }
     }
   }
@@ -940,5 +972,17 @@ dl {
   dd {
     margin-bottom: 0.5rem;
     color: var(--main-color);
+  }
+}
+
+@keyframes swift-left {
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes swift-right {
+  50% {
+    transform: translateX(5px);
   }
 }

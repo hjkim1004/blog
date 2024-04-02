@@ -105,6 +105,9 @@
   .category-list img {
     height: 9rem;
   }
+  .category-list li .category-container {
+    padding: 0.7rem;
+  }
   .tag-list {
     display: -webkit-inline-box;
     flex-wrap: nowrap;
@@ -158,6 +161,9 @@
   }
   .category-list img {
     height: 6rem;
+  }
+  .category-list li .category-container {
+    padding: 0.5rem;
   }
 }
 /*# sourceMappingURL=mobile.css.map */
