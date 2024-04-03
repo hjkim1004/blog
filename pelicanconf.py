@@ -60,6 +60,13 @@ CUSTOM_ARTICLE_URLS = {
     }
 }
 
+CATEGORY_URL = 'category/{slug}/'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+
+TAG_URL = 'tag/{slug}/'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
+
+
 # PLUGIN - sitemap
 SITEMAP = {
     'format': 'xml'
