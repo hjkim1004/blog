@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Twinkle's Blog - What is Jinja?</title>
+<meta charset="utf-8"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!-- manifest -->
+<link rel="manifest" href="https://twinklekhj.xyz/blog/theme/manifest.json">
+<meta name="theme-color" content="#fff">
+
+<!-- favicon -->
+<link rel="icon" href="https://twinklekhj.xyz/blog/theme/images/favicon.svg">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://twinklekhj.xyz/blog">
+
+<!-- Cache -->
+<meta http-equiv="refresh" content="6000">
+<meta http-equiv="Cache-Control" content="max-age=31536000"/>
+
+<!-- OG -->
+<meta name="title" content="Twinkle's Blog">
+<meta name="description" content="Hi, I'm full-stack developer<br>Thanks for visiting">
+<meta name="apple-mobile-web-app-title" content="Twinkle's Blog">
+<meta name="application-name" content="Twinkle's Blog">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://twinklekhj.xyz/blog">
+<meta property="og:title" content="Twinkle's Blog">
+<meta property="og:description" content="Hi, I'm full-stack developer<br>Thanks for visiting">
+<meta property="og:site_name" content="Twinkle's Blog">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Twinkle's Blog">
+<meta property="twitter:url" content="https://twinklekhj.xyz/blog">
+<meta property="twitter:description" content="Hi, I'm full-stack developer<br>Thanks for visiting">
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/fonts/notokr.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/fonts/sansation.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/pygments.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/lib/code/style.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/dark.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/mobile.css">
+
+
+
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/lib/webfont/webfont.min.js"></script>
+
+<script>
+    WebFont.load({
+        google: {
+            "families": ["Lato:300,400,700,900"]
+        },
+        custom: {
+            "families": ["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"],
+            urls: ['https://twinklekhj.xyz/blog/theme/lib/webfont/fonts.css']
+        },
+    });
+</script>
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/js/main.js"></script></head>
+<body data-theme="light" class="scrolled">
+<header class="header">
+    <div class="inner">
+<div class="app-logo">
+    <a href="https://twinklekhj.xyz/blog/">
+        <div class="icon">
+            <img src="https://twinklekhj.xyz/blog/theme/images/favicon.svg" alt="logo 아이콘">
+        </div>
+        <div class="title">Twinkle's Blog</div>
+    </a>
+</div>        <div class="divider"></div>
+        <button data-role="action" data-action="theme">
+            <img src="https://twinklekhj.xyz/blog/theme/images/icon_moon.svg" alt="다크 모드 변경하기" class="theme-dark">
+            <img src="https://twinklekhj.xyz/blog/theme/images/icon_sun.svg" alt="일반 모드 변경하기" class="theme-white">
+        </button>
+    </div>
+</header>
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/js/store.js"></script>
+<script>
+    Action.applyTheme();
+    Action.applyOffset();
+</script>
+
+<main>
+    <div class="inner">
+
+        <section class="content">
+            <div class="content-header"></div>
+            <div class="content-body">    <article class="post">
+        <h1 class="post-title">What is Jinja?</h1>
+        <div class="post-metadata">
+            <ul class="meta-list">
+                    <li><i class="fas fa-user"></i> Author: <b>Heejeong Kim</b></li>
+                    <li><i class="fas fa-calendar-alt"></i> Date: Mar 29, 2024</li>
+                    <li>
+                        <span><i class="fas fa-tags"></i> Tags: </span>
+                        <ul class="tag-list">
+                                <li><a href="https://twinklekhj.xyz/blog/tag/python/">python</a></li>
+                                <li><a href="https://twinklekhj.xyz/blog/tag/pelican/">pelican</a></li>
+                                <li><a href="https://twinklekhj.xyz/blog/tag/jinja/">jinja</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+
+                <div class="post-series">
+                    <h4 class="title">
+                        <a href="https://twinklekhj.xyz/blog/category/pelican/">pelican</a>
+                    </h4>
+                    <ol class="list">
+                            <li >
+                                <a href='https://twinklekhj.xyz/blog/pelican/create-pelican-site.html'>Make pelican blog</a>
+                            </li>
+                    </ol>
+                    <div class="tail">
+                        <button data-role="action" data-action="hide" class="hide">Show Posts</button>
+                    </div>
+                </div>
+
+        <div class="post-content">
+            <div class="post-index"></div>
+            <div class="post-body"><h1>Introduction</h1>
+<p><code>Pelican</code> is based on <code>Jinja</code> Template Engine.</p>
+<p>So, we need to know the jinja.
+In this post, I'm going to summarize jinja syntax</p>
+<hr>
+<h1>1. Template</h1>
+<h2>1.1 Template Engine</h2>
+<h3>Definition</h3>
+<blockquote>
+<h3>Template Engine</h3>
+<p>A template processor (also known as a template engine or template parser) is software designed to combine templates with data (defined by a data model) to produce resulting documents or programs.</p>
+</blockquote>
+<h2>1.2 Jinja</h2>
+<p>Pelican is based on <code>jinja</code> Template Engine</p>
+<blockquote>
+<h3>Jinja</h3>
+<p><img alt="Jinja Logo" src="https://twinklekhj.xyz/blog/images/pelican/jinja.svg"></p>
+<p>Jinja is a web template engine for the Python programming language.</p>
+<p>It was created by <strong>Armin Ronacher</strong> and is licensed under a <strong>BSD</strong> License.</p>
+<p>Jinja is similar to the Django template engine but provides Python-like expressions while ensuring that the templates are evaluated in a sandbox.</p>
+<p>It is a text-based template language and thus can be used to generate any markup as well as source code.</p>
+</blockquote>
+<p><br></p>
+<p>I installed Pelican <code>v.4.9.1</code></p>
+<blockquote>
+<h3>Version Info</h3>
+<ul>
+<li>pelican: 4.9.1</li>
+<li>Jinja: 3.1.2</li>
+</ul>
+</blockquote>
+<p>you can see for more infomation at <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja Docs</a></p>
+<hr>
+<h1>2. Jinja Syntax</h1>
+<h2>2.1 Statements</h2>
+<h2>2.2 Expressions</h2>
+<h2>2.3 Comments</h2></div>
+        </div>
+
+
+        <div class="posts-internal-links">
+            <h3 class="title">Related Posts</h3>
+            <ul>
+                <li>
+
+                </li>
+                <li>
+                </li>
+            </ul>
+        </div>
+
+            <div class="post-comments">
+                <h3 class="title">Comments <i class="fas fa-comments"></i></h3>
+                <div>
+                    <div id="disqus_thread"></div>
+                </div>
+                <script type="text/javascript">
+                    const createDisqusScript = function () {
+                        const dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = '//twinklekhj.disqus.com/embed.js';
+
+                        return dsq;
+                    }
+
+                    const createDisqus = function () {
+                        document.body.appendChild(createDisqusScript())
+                    }
+
+                    createDisqus();
+                    Store.theme.observer.addObserver(function (e) {
+                        DISQUS.reset();
+                        createDisqus();
+                    });
+                </script>
+                <noscript>Please enable JavaScript to view <a href="//disqus.com/?ref_noscript">comments</a>.
+                </noscript>
+            </div>
+    </article>
+</div>
+        </section>
+    </div>
+</main>
+
+
+<footer class="footer">
+    <div class="inner">
+        <div>Copyright 2024. Heejeong Kim. All rights reserved.</div>
+        <div>Powered by <a href="https://getpelican.com/" class="external" target="_blank">Pelican</a>,
+            theme by <a href="https://github.com/twinklekhj/pelican-twinkle" class="external" target="_blank">twinklekhj</a>.
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/lib/code/code.js"></script>
+
+</body>
+</html>

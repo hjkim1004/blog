@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Twinkle's Blog - Make pelican blog</title>
+<meta charset="utf-8"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!-- manifest -->
+<link rel="manifest" href="https://twinklekhj.xyz/blog/theme/manifest.json">
+<meta name="theme-color" content="#fff">
+
+<!-- favicon -->
+<link rel="icon" href="https://twinklekhj.xyz/blog/theme/images/favicon.svg">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://twinklekhj.xyz/blog">
+
+<!-- Cache -->
+<meta http-equiv="refresh" content="6000">
+<meta http-equiv="Cache-Control" content="max-age=31536000"/>
+
+<!-- OG -->
+<meta name="title" content="Twinkle's Blog">
+<meta name="description" content="Hi, I'm full-stack developer<br>Thanks for visiting">
+<meta name="apple-mobile-web-app-title" content="Twinkle's Blog">
+<meta name="application-name" content="Twinkle's Blog">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://twinklekhj.xyz/blog">
+<meta property="og:title" content="Twinkle's Blog">
+<meta property="og:description" content="Hi, I'm full-stack developer<br>Thanks for visiting">
+<meta property="og:site_name" content="Twinkle's Blog">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Twinkle's Blog">
+<meta property="twitter:url" content="https://twinklekhj.xyz/blog">
+<meta property="twitter:description" content="Hi, I'm full-stack developer<br>Thanks for visiting">
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/fonts/notokr.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/fonts/sansation.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/pygments.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/lib/code/style.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/dark.css">
+<link rel="stylesheet" type="text/css" href="https://twinklekhj.xyz/blog/theme/css/mobile.css">
+
+
+
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/lib/webfont/webfont.min.js"></script>
+
+<script>
+    WebFont.load({
+        google: {
+            "families": ["Lato:300,400,700,900"]
+        },
+        custom: {
+            "families": ["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"],
+            urls: ['https://twinklekhj.xyz/blog/theme/lib/webfont/fonts.css']
+        },
+    });
+</script>
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/js/main.js"></script></head>
+<body data-theme="light" class="scrolled">
+<header class="header">
+    <div class="inner">
+<div class="app-logo">
+    <a href="https://twinklekhj.xyz/blog/">
+        <div class="icon">
+            <img src="https://twinklekhj.xyz/blog/theme/images/favicon.svg" alt="logo 아이콘">
+        </div>
+        <div class="title">Twinkle's Blog</div>
+    </a>
+</div>        <div class="divider"></div>
+        <button data-role="action" data-action="theme">
+            <img src="https://twinklekhj.xyz/blog/theme/images/icon_moon.svg" alt="다크 모드 변경하기" class="theme-dark">
+            <img src="https://twinklekhj.xyz/blog/theme/images/icon_sun.svg" alt="일반 모드 변경하기" class="theme-white">
+        </button>
+    </div>
+</header>
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/js/store.js"></script>
+<script>
+    Action.applyTheme();
+    Action.applyOffset();
+</script>
+
+<main>
+    <div class="inner">
+
+        <section class="content">
+            <div class="content-header"></div>
+            <div class="content-body">    <article class="post">
+        <h1 class="post-title">Make pelican blog</h1>
+        <div class="post-metadata">
+            <ul class="meta-list">
+                    <li><i class="fas fa-user"></i> Author: <b>Heejeong Kim</b></li>
+                    <li><i class="fas fa-calendar-alt"></i> Date: Mar 27, 2024</li>
+                    <li>
+                        <span><i class="fas fa-tags"></i> Tags: </span>
+                        <ul class="tag-list">
+                                <li><a href="https://twinklekhj.xyz/blog/tag/python/">python</a></li>
+                                <li><a href="https://twinklekhj.xyz/blog/tag/pelican/">pelican</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+
+                <div class="post-series">
+                    <h4 class="title">
+                        <a href="https://twinklekhj.xyz/blog/category/pelican/">pelican</a>
+                    </h4>
+                    <ol class="list">
+                            <li class="active">
+                                <a href='https://twinklekhj.xyz/blog/pelican/create-pelican-site.html'>Make pelican blog</a>
+                            </li>
+                    </ol>
+                    <div class="tail">
+                        <button data-role="action" data-action="hide" class="hide">Show Posts</button>
+                    </div>
+                </div>
+
+        <div class="post-content">
+            <div class="post-index"></div>
+            <div class="post-body"><h1>1. What is Pelican?</h1>
+<p><img alt="Pelican Logo" src="https://twinklekhj.xyz/blog/images/pelican/pelican-preview.gif"></p>
+<p>Pelican is <strong>Static site generator</strong> powered by Python<br>
+“Pelican” is an anagram of calepin, which means “notebook” in French.</p>
+<p>you can see more information at <a href="https://getpelican.com/">Pelican Offical Site</a>.</p>
+<p><br></p>
+<h1>2. Pelican Quick Start</h1>
+<h2>2.1 Install Dependencies</h2>
+<blockquote>
+<h3>💡 Prerequisites</h3>
+<p>Pelican should be presupposed cause it is python based. confirm below commands</p>
+<ul>
+<li><code>python</code></li>
+<li><code>pip</code></li>
+</ul>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># core library</span>
+pip<span class="w"> </span>install<span class="w"> </span>pelican
+
+<span class="c1"># additional library: markdown</span>
+<span class="c1"># add markdown package for using markdown editor</span>
+pip<span class="w"> </span>install<span class="w"> </span>markdown
+
+<span class="c1"># additional library: typogrify</span>
+<span class="c1"># add typogrify for typographically-improved HTML</span>
+pip<span class="w"> </span>install<span class="w"> </span>typogrify
+</code></pre></div>
+
+<p><br></p>
+<h2>2.2 Create Project</h2>
+<p>write below commands sequentially</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># make folder for project</span>
+mkdir<span class="w"> </span>pelican-demo
+
+<span class="c1"># move to folder</span>
+<span class="nb">cd</span><span class="w"> </span>pelican-demo
+
+<span class="c1"># initialize folder for Pelican project</span>
+pelican-quickstart
+</code></pre></div>
+
+<p><br></p>
+<p>you can configure options while running command</p>
+<div class="highlight"><pre><span></span><code><span class="n">Welcome</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span><span class="w"> </span><span class="n">v4</span><span class="mf">.9.1</span><span class="p">.</span>
+
+<span class="n">This</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">help</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pelican</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">website</span><span class="p">.</span>
+
+<span class="n">Please</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">questions</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">files</span>
+<span class="n">needed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Pelican</span><span class="p">.</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="n">Pelican</span><span class="w"> </span><span class="n">Demo</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="n">Heejeong</span><span class="w"> </span><span class="n">Kim</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">Korean</span><span class="o">]</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">   </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">y</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">How</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">10</span><span class="o">]</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">Europe/Rome</span><span class="o">]</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">publishing</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">y</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">FTP</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">SSH</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Dropbox</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">S3</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Rackspace</span><span class="w"> </span><span class="n">Cloud</span><span class="w"> </span><span class="n">Files</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">GitHub</span><span class="w"> </span><span class="n">Pages</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">y</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Is</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">personal</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">)</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span>
+</code></pre></div>
+
+<p><br></p>
+<h2>2.3 Structure</h2>
+<p>The project has below structure if you make project via <code>pelican-quickstart</code>.</p>
+<div class="highlight"><pre><span></span><code>yourproject/
+├── content         # posting directory
+│   └── (pages)
+├── output          # build directory
+├── tasks.py            # setting and running code
+├── Makefile            # build file
+├── pelicanconf.py      # Main Setting file
+└── publishconf.py      # Settings to use when ready to publish
+</code></pre></div>
+
+<p>you make a new <code>.md</code> file in <code>content</code> directory if you want to write a new post</p>
+<p><br></p>
+<h2>2.4 Command</h2>
+<h3>build ⚡</h3>
+<p>you can run project after build</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># default command</span>
+pelican
+
+<span class="c1"># command with [path]</span>
+pelican<span class="w"> </span>content
+
+<span class="c1"># command with [path] [-o output_directory] [-s setting_file] [-t template_directory]</span>
+pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py<span class="w"> </span>-t<span class="w"> </span>themes/twinkle
+</code></pre></div>
+
+<p><br></p>
+<h3>run 🔥</h3>
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>--listen
+</code></pre></div>
+
+<p><br></p>
+<h3>etc</h3>
+<p>if you want to see more, type <code>pelican --help</code></p>
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>--help
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">usage</span><span class="p">:</span><span class="w"> </span><span class="n">pelican</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">THEME</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">SETTINGS</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">q</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">D</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span>
+<span class="w">               </span><span class="p">[</span><span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">settings</span><span class="w"> </span><span class="p">[</span><span class="n">SETTING_NAME</span><span class="w"> </span><span class="o">...</span><span class="p">]]</span><span class="w"> </span><span class="p">[</span><span class="o">--</span><span class="n">relative</span><span class="o">-</span><span class="n">urls</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">--</span><span class="n">cache</span><span class="o">-</span><span class="n">path</span><span class="w"> </span><span class="n">CACHE_PATH</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">cache</span><span class="p">]</span>
+<span class="w">               </span><span class="p">[</span><span class="o">--</span><span class="n">fatal</span><span class="w"> </span><span class="n">errors</span><span class="o">|</span><span class="n">warnings</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">--</span><span class="n">logs</span><span class="o">-</span><span class="n">dedup</span><span class="o">-</span><span class="nb">min</span><span class="o">-</span><span class="n">level</span><span class="w"> </span><span class="p">{</span><span class="n">DEBUG</span><span class="p">,</span><span class="n">INFO</span><span class="p">,</span><span class="n">WARNING</span><span class="p">,</span><span class="n">ERROR</span><span class="p">}]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="n">PORT</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="n">BIND</span><span class="p">]</span>
+<span class="w">               </span><span class="p">[</span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="p">[</span><span class="n">OVERRIDES</span><span class="w"> </span><span class="o">...</span><span class="p">]]</span>
+<span class="w">               </span><span class="p">[</span><span class="n">path</span><span class="p">]</span>
+
+<span class="n">A</span><span class="w"> </span><span class="k">tool</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">blog</span><span class="p">,</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">restructured</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">files</span><span class="o">.</span>
+
+<span class="n">positional</span><span class="w"> </span><span class="n">arguments</span><span class="p">:</span>
+<span class="w">  </span><span class="n">path</span><span class="w">                  </span><span class="n">Path</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+
+<span class="n">options</span><span class="p">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">            </span><span class="n">show</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">help</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">exit</span>
+<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">THEME</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">theme</span><span class="o">-</span><span class="n">path</span><span class="w"> </span><span class="n">THEME</span>
+<span class="w">                        </span><span class="n">Path</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">theme</span><span class="w"> </span><span class="n">templates</span><span class="o">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">included</span>
+<span class="w">                        </span><span class="n">with</span><span class="w"> </span><span class="n">pelican</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">output</span><span class="w"> </span><span class="n">OUTPUT</span>
+<span class="w">                        </span><span class="n">Where</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">generated</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">created</span><span class="p">,</span><span class="w"> </span><span class="n">named</span>
+<span class="w">                        </span><span class="s2">&quot;output&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">path</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">SETTINGS</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">settings</span><span class="w"> </span><span class="n">SETTINGS</span>
+<span class="w">                        </span><span class="n">The</span><span class="w"> </span><span class="n">settings</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">application</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">exists</span>
+<span class="w">                        </span><span class="n">with</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">name</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">delete</span><span class="o">-</span><span class="n">output</span><span class="o">-</span><span class="n">directory</span>
+<span class="w">                        </span><span class="n">Delete</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">directory</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">verbose</span><span class="w">         </span><span class="n">Show</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">messages</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">quiet</span><span class="w">           </span><span class="n">Show</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">critical</span><span class="w"> </span><span class="n">errors</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">debug</span><span class="w">           </span><span class="n">Show</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">messages</span><span class="p">,</span><span class="w"> </span><span class="n">including</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="n">messages</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="n">version</span><span class="w">             </span><span class="n">Print</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">pelican</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">exit</span><span class="o">.</span>
+<span class="w">  </span><span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">autoreload</span><span class="w">      </span><span class="n">Relaunch</span><span class="w"> </span><span class="n">pelican</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">modification</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">False</span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">settings</span><span class="w"> </span><span class="p">[</span><span class="n">SETTING_NAME</span><span class="w"> </span><span class="o">...</span><span class="p">]</span>
+<span class="w">                        </span><span class="n">Print</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">settings</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">exit</span><span class="o">.</span><span class="w"> </span><span class="n">Append</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">setting</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">arguments</span><span class="w"> </span><span class="n">to</span>
+<span class="w">                        </span><span class="n">see</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">specific</span><span class="w"> </span><span class="n">settings</span><span class="w"> </span><span class="n">only</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="n">relative</span><span class="o">-</span><span class="n">urls</span><span class="w">       </span><span class="n">Use</span><span class="w"> </span><span class="n">relative</span><span class="w"> </span><span class="n">urls</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">output</span><span class="p">,</span><span class="w"> </span><span class="n">useful</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="n">development</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">False</span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="n">cache</span><span class="o">-</span><span class="n">path</span><span class="w"> </span><span class="n">CACHE_PATH</span>
+<span class="w">                        </span><span class="n">Directory</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">defaults</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s2">&quot;cache&quot;</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span>
+<span class="w">                        </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">cache</span><span class="w">        </span><span class="n">Ignore</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">loading</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">False</span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="n">fatal</span><span class="w"> </span><span class="n">errors</span><span class="o">|</span><span class="n">warnings</span>
+<span class="w">                        </span><span class="n">Exit</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">zero</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">errors</span><span class="o">/</span><span class="n">warnings</span><span class="w"> </span><span class="n">encountered</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="o">--</span><span class="n">logs</span><span class="o">-</span><span class="n">dedup</span><span class="o">-</span><span class="nb">min</span><span class="o">-</span><span class="n">level</span><span class="w"> </span><span class="p">{</span><span class="n">DEBUG</span><span class="p">,</span><span class="n">INFO</span><span class="p">,</span><span class="n">WARNING</span><span class="p">,</span><span class="n">ERROR</span><span class="p">}</span>
+<span class="w">                        </span><span class="n">Only</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">de</span><span class="o">-</span><span class="n">duplication</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="n">equal</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span>
+<span class="w">                        </span><span class="n">WARNING</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">listen</span><span class="w">          </span><span class="n">Serve</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">via</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="mf">8000.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">False</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="n">PORT</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">port</span><span class="w"> </span><span class="n">PORT</span><span class="w">  </span><span class="n">Port</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">serve</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">at</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="n">BIND</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">bind</span><span class="w"> </span><span class="n">BIND</span><span class="w">  </span><span class="n">IP</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">serving</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">via</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="n">None</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="p">[</span><span class="n">OVERRIDES</span><span class="w"> </span><span class="o">...</span><span class="p">],</span><span class="w"> </span><span class="o">--</span><span class="n">extra</span><span class="o">-</span><span class="n">settings</span><span class="w"> </span><span class="p">[</span><span class="n">OVERRIDES</span><span class="w"> </span><span class="o">...</span><span class="p">]</span>
+<span class="w">                        </span><span class="n">Specify</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">SETTING</span><span class="o">=</span><span class="n">VALUE</span><span class="w"> </span><span class="n">pairs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">override</span><span class="w"> </span><span class="n">settings</span><span class="o">.</span><span class="w"> </span><span class="n">VALUE</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">JSON</span><span class="w"> </span><span class="n">notation</span><span class="p">:</span>
+<span class="w">                        </span><span class="n">specify</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">SETTING</span><span class="o">=</span><span class="s1">&#39;&quot;some string&quot;&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">booleans</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">SETTING</span><span class="o">=</span><span class="bp">true</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">SETTING</span><span class="o">=</span><span class="bp">false</span><span class="p">;</span>
+<span class="w">                        </span><span class="n">None</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">SETTING</span><span class="o">=</span><span class="nb nb-Type">null</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="p">{})</span>
+</code></pre></div></div>
+        </div>
+
+            <div class="post-share-links">
+                <h3 class="title">
+                    <span>Share with</span>
+                    <i class="fas fa-share-alt"></i>
+                </h3>
+                <div class="list">
+                    <a class="email" href="mailto:?subject=Make%20pelican%20blog&amp;body=https%3A//twinklekhj.xyz/blog/pelican/create-pelican-site.html" target="_blank" title="Share via Email">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                    </a>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=Make%20pelican%20blog&url=https%3A//twinklekhj.xyz/blog/pelican/create-pelican-site.html&hashtags=python,pelican" target="_blank"
+                       title="Share on Twitter">
+                        <img src="https://twinklekhj.xyz/blog/theme/images/icon_twitter.svg"/><span>Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//twinklekhj.xyz/blog/pelican/create-pelican-site.html" target="_blank"
+                       title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i><span>Facebook</span>
+                    </a>
+                    <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//twinklekhj.xyz/blog/pelican/create-pelican-site.html&title=Make%20pelican%20blog&summary=Make%20blog%20with%20pelican%20and%20gitHub%20pages&source=https%3A//twinklekhj.xyz/blog/pelican/create-pelican-site.html" target="_blank"
+                       title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+        <div class="posts-internal-links">
+            <h3 class="title">Related Posts</h3>
+            <ul>
+                <li>
+
+                </li>
+                <li>
+                </li>
+            </ul>
+        </div>
+
+            <div class="post-comments">
+                <h3 class="title">Comments <i class="fas fa-comments"></i></h3>
+                <div>
+                    <div id="disqus_thread"></div>
+                </div>
+                <script type="text/javascript">
+                    const createDisqusScript = function () {
+                        const dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = '//twinklekhj.disqus.com/embed.js';
+
+                        return dsq;
+                    }
+
+                    const createDisqus = function () {
+                        document.body.appendChild(createDisqusScript())
+                    }
+
+                    createDisqus();
+                    Store.theme.observer.addObserver(function (e) {
+                        DISQUS.reset();
+                        createDisqus();
+                    });
+                </script>
+                <noscript>Please enable JavaScript to view <a href="//disqus.com/?ref_noscript">comments</a>.
+                </noscript>
+            </div>
+    </article>
+</div>
+        </section>
+    </div>
+</main>
+
+
+<footer class="footer">
+    <div class="inner">
+        <div>Copyright 2024. Heejeong Kim. All rights reserved.</div>
+        <div>Powered by <a href="https://getpelican.com/" class="external" target="_blank">Pelican</a>,
+            theme by <a href="https://github.com/twinklekhj/pelican-twinkle" class="external" target="_blank">twinklekhj</a>.
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://twinklekhj.xyz/blog/theme/lib/code/code.js"></script>
+
+</body>
+</html>
