@@ -38,7 +38,7 @@ JINJA_ENVIRONMENT = {
 }
 
 # PLUGINS
-PLUGIN_PATHS = ['./themes/twinkle/plugins']
+PLUGIN_PATHS = [THEME + '/plugins']
 PLUGINS = [
     'pelican.plugins.sitemap',
     'representative_image',
