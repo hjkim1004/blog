@@ -1,23 +1,24 @@
 const Store = {
     theme: {
-        value: localStorage.theme || "",
+        value: localStorage.theme || "light",
         reducers: {
             setTheme: function (theme) {
                 Store.theme.value = theme;
                 Store.theme.reducers.applyTheme();
             },
             applyTheme: function () {
-                let value = Store.theme.value;
-
-                if (value === "") {
-                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                        value = "dark";
-                    }
-                    value = "light";
-                }
+                const value = Store.theme.value;
 
                 localStorage.theme = value;
                 document.body.dataset.theme = value;
+
+                const metaThemeObj = document.querySelector('meta[name="theme-color"]');
+                // 테마 컬러 추가
+                if (value === 'dark') {
+                    metaThemeObj.setAttribute('content', '#1e1e1e')
+                } else {
+                    metaThemeObj.setAttribute('content', 'white')
+                }
 
                 Store.theme.observer.notify(value);
             }

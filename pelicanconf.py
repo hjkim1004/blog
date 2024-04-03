@@ -55,8 +55,8 @@ PLUGINS = [
 ARTICLE_URL = "posts/{slug}.html"
 CUSTOM_ARTICLE_URLS = {
     'pelican': {
-        'URL': 'posts/{category}/{slug}.html',
-        'SAVE_AS': 'posts/{category}/{slug}.html'
+        'URL': '{category}/{slug}.html',
+        'SAVE_AS': '{category}/{slug}.html'
     }
 }
 
