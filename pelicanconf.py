@@ -29,7 +29,7 @@ EXTRA_PATH_METADATA = {
 }
 
 # THEME
-THEME = "themes/twinkle"
+THEME = "themes/pelican-twinkle"
 THEME_STATIC_DIR = 'theme'
 
 # JINJA
@@ -43,17 +43,25 @@ PLUGINS = [
     'pelican.plugins.sitemap',
     'representative_image',
     'share_post',
-    'github_activity',
-    'neighbors'
+    'neighbors',
+    'custom_article_urls'
 ]
 
-CLEAN_SUMMARY_MAXIMUM = 0
-CLEAN_SUMMARY_MINIMUM_ONE = False
+# PLUGIN - custom_article_urls
+ARTICLE_URL = "posts/{slug}.html"
+CUSTOM_ARTICLE_URLS = {
+    'pelican': {
+        'URL': 'posts/{category}/{slug}/',
+        'SAVE_AS': 'posts/{category}/{slug}.html'
+    }
+}
 
+# PLUGIN - sitemap
 SITEMAP = {
     'format': 'xml'
 }
 
+# Author Links
 LINKS = (
     ("home", "https://twinklekhj.xyz", "fontawesome"),
     ("velog", "https://velog.io/@developer_khj", "image"),
@@ -63,12 +71,14 @@ LINKS = (
 
 # Author Name
 AUTHOR = "Heejeong Kim"
-AUTHOR_GITHUB = "hjkim1004"
-AUTHOR_DESC = "Hi, I'm full-stack developer<br>Thanks for visiting"
-
-GITHUB_ACTIVITY_FEED = 'https://github.com/hjkim1004.atom'
-GITHUB_ACTIVITY_MAX_ENTRIES = 10
+AUTHOR_INFO = {
+    "GITHUB": "hjkim1004",
+    "DESCRIPTION": "Hi, I'm full-stack developer<br>Thanks for visiting"
+}
 
 # OG METADATA
 OG_TITLE = SITENAME
-OG_DESCRIPTION = "Welcome To Twinkle's Blog."
+OG_DESCRIPTION = AUTHOR_INFO["DESCRIPTION"]
+
+# Date Format
+DEFAULT_DATE_FORMAT = ('%b %d, %Y')
